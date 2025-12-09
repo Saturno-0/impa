@@ -1,103 +1,133 @@
-import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="relative">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1450779333149-639293618a6c?q=80&w=2070&auto=format&fit=crop")' }}
+          >
+          </div>
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter">Adopta, Reporta, Ayuda</h1>
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/90">
+              Tu apoyo hace la diferencia en la vida de los animales. Adopta, reporta el maltrato y ayuda a crear un mundo
+              mejor para ellos.
+            </p>
+            <button
+              className="mt-8 inline-flex items-center justify-center rounded-full h-12 px-8 bg-primary text-background-dark text-base font-bold hover:bg-primary/90 transition-colors"
+            >
+              Conoce más
+            </button>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Services Section */}
+        <section className="py-16 sm:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Nuestros Servicios</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Service 1 */}
+              <div className="group flex flex-col items-center text-center">
+                <div
+                  className="w-full aspect-square rounded-lg bg-cover bg-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1570018144715-43110363d70a?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <h3 className="text-lg font-bold text-text-light dark:text-text-dark">Adopción</h3>
+              </div>
+              {/* Service 2 */}
+              <div className="group flex flex-col items-center text-center">
+                <div
+                  className="w-full aspect-square rounded-lg bg-cover bg-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1505628346881-b72e2780457f?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <h3 className="text-lg font-bold text-text-light dark:text-text-dark">Reportar Maltrato</h3>
+              </div>
+              {/* Service 3 */}
+              <div className="group flex flex-col items-center text-center">
+                <div
+                  className="w-full aspect-square rounded-lg bg-cover bg-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <h3 className="text-lg font-bold text-text-light dark:text-text-dark">Solicitar Esterilización</h3>
+              </div>
+              {/* Service 4 */}
+              <div className="group flex flex-col items-center text-center">
+                <div
+                  className="w-full aspect-square rounded-lg bg-cover bg-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1532202802379-df93d543bac3?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <h3 className="text-lg font-bold text-text-light dark:text-text-dark">Pláticas de Concientización</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Adoption Section */}
+        <section className="bg-background-light dark:bg-background-dark py-16 sm:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Animales en Adopción</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {/* Pet Card 1 */}
+              <div className="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-md transition-shadow hover:shadow-xl">
+                <div 
+                  className="w-full aspect-square bg-cover bg-center"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <div className="p-4">
+                  <p className="text-lg font-bold text-text-light dark:text-text-dark">Max</p>
+                  <p className="text-sm text-muted-light dark:text-muted-dark">Amigable y juguetón</p>
+                </div>
+              </div>
+              {/* Pet Card 2 */}
+              <div className="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-md transition-shadow hover:shadow-xl">
+                <div 
+                  className="w-full aspect-square bg-cover bg-center"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1529778873920-4da4926a7071?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <div className="p-4">
+                  <p className="text-lg font-bold text-text-light dark:text-text-dark">Bella</p>
+                  <p className="text-sm text-muted-light dark:text-muted-dark">Cariñosa y tranquila</p>
+                </div>
+              </div>
+              {/* Pet Card 3 */}
+              <div className="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-md transition-shadow hover:shadow-xl">
+                <div 
+                  className="w-full aspect-square bg-cover bg-center"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <div className="p-4">
+                  <p className="text-lg font-bold text-text-light dark:text-text-dark">Rocky</p>
+                  <p className="text-sm text-muted-light dark:text-muted-dark">Energético y leal</p>
+                </div>
+              </div>
+              {/* Pet Card 4 */}
+              <div className="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-md transition-shadow hover:shadow-xl">
+                <div 
+                  className="w-full aspect-square bg-cover bg-center"
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=1000&auto=format&fit=crop")' }}
+                >
+                </div>
+                <div className="p-4">
+                  <p className="text-lg font-bold text-text-light dark:text-text-dark">Luna</p>
+                  <p className="text-sm text-muted-light dark:text-muted-dark">Independiente y curiosa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
