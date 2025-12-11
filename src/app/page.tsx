@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import React from 'react';
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
+        <Navbar /> 
         <section className="relative">
           <div 
             className="absolute inset-0 bg-cover bg-center"
