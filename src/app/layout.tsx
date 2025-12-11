@@ -24,7 +24,6 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${workSans.variable} bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}>
         <div className="flex flex-col min-h-screen">
-          <Navbar />
           {children} {/* Aquí se renderiza tu page.tsx */}
           <Footer /> {/* <--- Coloca el Footer aquí */}
         </div>
