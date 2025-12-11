@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer"; // <--- Importa el Footer
 
 const workSans = Work_Sans({ 
   subsets: ["latin"],
@@ -24,9 +22,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${workSans.variable} bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}>
         <div className="flex flex-col min-h-screen">
-          <Navbar />
           {children} {/* Aquí se renderiza tu page.tsx */}
-          <Footer /> {/* <--- Coloca el Footer aquí */}
         </div>
       </body>
     </html>
