@@ -9,6 +9,7 @@ const SidebarAdmin = () => {
       </div>
 
       <nav className="flex-1 px-4 py-2 space-y-2">
+        
         <a
           className="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-semibold"
           href="#"
