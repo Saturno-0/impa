@@ -6,26 +6,23 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // Importante para el soporte dark mode del HTML
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        // Estos son los colores extraídos de tu script HTML
+        // Aquí recuperamos tus colores personalizados
         primary: "#17cf17",
         "background-light": "#f6f8f6",
         "background-dark": "#112111",
       },
       fontFamily: {
-        // Asegúrate de importar la fuente o usar una por defecto
         display: ["var(--font-work-sans)", "sans-serif"],
-      },
-      borderRadius: {
-        DEFAULT: "0.25rem",
-        lg: "0.5rem",
-        xl: "0.75rem",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Activamos el plugin para que los inputs se vean bien
+    require("@tailwindcss/forms"),
+  ],
 };
 export default config;
