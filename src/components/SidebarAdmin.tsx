@@ -14,11 +14,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { href: '/admin', label: 'Inicio', activeKey: 'inicio' },
-    { href: '/admin/animales', label: 'Animales',  activeKey: 'animales' },
-    { href: '/admin/adopciones', label: 'Adopciones', activeKey: 'adopciones' },
-    { href: '/admin/reportes', label: 'Reportes', activeKey: 'reportes' },
-    { href: '/admin/servicios', label: 'Servicios', activeKey: 'servicios' },
+    { href: '/resumen', label: 'Inicio', activeKey: 'inicio' },
+    { href: '/animales', label: 'Animales',  activeKey: 'animales' },
+    { href: '/adopciones', label: 'Adopciones', activeKey: 'adopciones' },
+    { href: '/reportes_admin', label: 'Reportes', activeKey: 'reportes' },
+    { href: '/servicios_admin', label: 'Servicios', activeKey: 'servicios' },
 ];
 
 
