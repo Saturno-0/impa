@@ -10,7 +10,7 @@ export default function Home() {
         <section className="relative">
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1450779333149-639293618a6c?q=80&w=2070&auto=format&fit=crop")' }}
+            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1286&auto=format&fit=crop")' }}
           >
           </div>
           <div className="absolute inset-0 bg-black/50"></div>
@@ -46,7 +46,7 @@ export default function Home() {
               <div className="group flex flex-col items-center text-center">
                 <div
                   className="w-full aspect-square rounded-lg bg-cover bg-center mb-4 transition-transform duration-300 group-hover:scale-105"
-                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1505628346881-b72e2780457f?q=80&w=1000&auto=format&fit=crop")' }}
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1453227588063-bb302b62f50b?q=80&w=1170&auto=format&fit=crop")' }}
                 >
                 </div>
                 <h3 className="text-lg font-bold text-text-light dark:text-text-dark">Reportar Maltrato</h3>
@@ -94,7 +94,7 @@ export default function Home() {
               <div className="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-md transition-shadow hover:shadow-xl">
                 <div 
                   className="w-full aspect-square bg-cover bg-center"
-                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1529778873920-4da4926a7071?q=80&w=1000&auto=format&fit=crop")' }}
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1587559045816-8b0a54d1fbd2?q=80&w=1170&auto=format&fit=crop")' }}
                 >
                 </div>
                 <div className="p-4">
