@@ -18,16 +18,16 @@ export default function Home() {
     ];
 
     return (
-        <main className="flex-grow bg-background-light dark:bg-background-dark min-h-screen">
+        <main className="flex-grow bg-background-light min-h-screen">
             <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
 
                     {/* Título y Descripción */}
                     <div className="mb-8 text-center">
-                        <h1 className="text-4xl font-bold tracking-tighter text-[#112111] dark:text-background-light sm:text-5xl font-display">
+                        <h1 className="text-4xl font-bold tracking-tighter text-[#112111] sm:text-5xl font-display">
                             Animales Disponibles
                         </h1>
-                        <p className="mt-4 text-lg text-[#112111]/70 dark:text-background-light/70 font-display">
+                        <p className="mt-4 text-lg text-[#112111]/70 font-display">
                             Conoce a nuestros amigos peludos que buscan un hogar amoroso. Cada uno tiene una historia única y está listo para ser parte de tu familia.
                         </p>
                     </div>
@@ -38,10 +38,9 @@ export default function Home() {
                             <button
                                 key={filter}
 
-                                className="flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 text-sm font-medium text-[#112111] hover:bg-primary/30 dark:bg-primary/30 dark:text-background-light dark:hover:bg-primary/40 transition-all shadow"
+                                className="flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4 text-sm font-medium text-[#112111] hover:bg-primary/30 transition-all shadow"
                             >
                                 <span>{filter}</span>
-                                <span className="material-symbols-outlined text-lg"> expand_more </span>
                             </button>
                         ))}
                     </div>
@@ -51,7 +50,7 @@ export default function Home() {
                         {animals.map((animal, index) => (
                             <div
                                 key={index}
-                                className="group flex cursor-pointer flex-col gap-3 rounded-lg bg-background-light dark:bg-background-dark p-2 transition-all hover:shadow-lg hover:-translate-y-1"
+                                className="group flex cursor-pointer flex-col gap-3 rounded-lg p-2 transition-all hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="aspect-square w-full overflow-hidden rounded">
                                     <div
@@ -62,10 +61,10 @@ export default function Home() {
                                     ></div>
                                 </div>
                                 <div>
-                                    <p className="text-base font-bold text-[#112111] dark:text-background-light font-display">
+                                    <p className="text-base font-bold text-[#112111] font-display">
                                         {animal.name}
                                     </p>
-                                    <p className="text-sm text-[#112111]/70 dark:text-background-light/70 font-display">
+                                    <p className="text-sm text-[#112111]/70 font-display">
                                         {animal.desc}
                                     </p>
                                 </div>

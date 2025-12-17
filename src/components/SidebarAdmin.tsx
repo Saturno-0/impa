@@ -1,5 +1,5 @@
 // src/components/Sidebar.tsx
-'use client'; 
+'use client';
 
 import React from 'react';
 import { usePathname } from 'next/navigation'; // <-- Importación clave
@@ -14,11 +14,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { href: '/resumen', label: 'Inicio', activeKey: 'inicio' },
-    { href: '/animales', label: 'Animales',  activeKey: 'animales' },
-    { href: '/adopciones', label: 'Adopciones', activeKey: 'adopciones' },
-    { href: '/reportes_admin', label: 'Reportes', activeKey: 'reportes' },
-    { href: '/servicios_admin', label: 'Servicios', activeKey: 'servicios' },
+    { href: '/admin_resumen', label: 'Inicio', activeKey: 'inicio' },
+    { href: '/admin_animales', label: 'Animales', activeKey: 'animales' },
+    { href: '/admin_adopciones', label: 'Adopciones', activeKey: 'adopciones' },
+    { href: '/admin_reportes', label: 'Reportes', activeKey: 'reportes' },
+    { href: '/admin_servicios', label: 'Servicios', activeKey: 'servicios' },
 ];
 
 
@@ -39,27 +39,29 @@ export default function Sidebar() {
     return (
         <aside className="w-64 bg-surface-light dark:bg-surface-dark flex flex-col border-r border-border-light dark:border-border-dark flex-shrink-0">
             {/* Logo y Título */}
-            <div className="p-6 flex items-center gap-3">
-                <h1 className="text-xl font-bold text-foreground-light dark:text-foreground-dark">IMPA</h1>
-            </div>
+            <Link href="/" className="p-6 flex items-center gap-3 cursor-pointer transition-opacity hover:opacity-80">
+                <h1 className="text-xl font-bold text-foreground-light dark:text-foreground-dark">
+                    IMPA
+                </h1>
+            </Link>
 
             {/* Navegación Principal */}
             <nav className="flex-1 px-4 py-2 space-y-2">
                 {navItems.map((item) => {
                     const active = isActive(item.href);
-                    
+
                     return (
-                        <Link 
+                        <Link
                             key={item.label}
                             href={item.href}
                             className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors 
-                                ${active 
-                                    ? 'bg-primary/20 dark:bg-primary/30 text-primary font-semibold' 
+                                ${active
+                                    ? 'bg-primary/20 dark:bg-primary/30 text-primary font-semibold'
                                     : 'text-foreground-light/70 dark:text-foreground-dark/70 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-foreground-light dark:hover:text-foreground-dark'
                                 }
                             `}
                         >
-                            
+
                             <span className="font-medium">{item.label}</span>
                         </Link>
                     );
